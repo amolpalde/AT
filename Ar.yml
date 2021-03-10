@@ -1,0 +1,17 @@
+--- 
+- name: "Several commands at a time on arista devices"
+  connection: local
+  gather_facts: false
+  hosts: eos
+  
+  tasks: 
+    - name: "Check ospf neighborship and existing users on arista devices"
+      eos_command:
+        authorize: yes
+        commands: 
+          - "show ip ospf neighbor"
+          - "show users"
+      
+      register: result
+    - debug: 
+        msg: "{{ result.stdout_lines }}"
