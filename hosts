@@ -1,9 +1,25 @@
-ARISTA01
-ARISTA11
-ARISTA02
-CSR01
-CSR02
-FORT01
-JUNOS01
-PALO01
-NXOS01
+[all:vars]
+ansible_user= apiuser
+ansible_ssh_pass= Nexaria@1
+
+[cisco]
+CSR01 ansible_host=10.250.204.21
+CSR02 ansible_host=10.250.204.22
+CSR03 ansible_host=10.250.204.23
+
+[eos]
+ARISTA01 ansible_host=10.250.204.24
+ARISTA02 ansible_host=10.250.204.25
+
+[paloalto]
+PALO01 ansible_host=10.250.204.26
+
+[fortinate]
+FORT01 ansible_host=10.250.204.27
+
+[nxos]
+NXOS01 ansible_host=10.250.204.28
+
+[juniper]
+JUNOS01 ansible_host=10.250.204.29
+
