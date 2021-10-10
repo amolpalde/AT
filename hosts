@@ -24,20 +24,20 @@ NXOS01 hostname=NXOS01 ansible_host=10.250.204.28
 JUNOS01 hostname=JUNOS01 ansible_host=10.250.204.29
 
 [cisco:vars]
-os: ios
+os=ios
 
 [eos:vars]
-os: eos
+os=eos
 
 [paloalto:vars]
-os: panos
+os=panos
 
 [fortinate:vars]
-os: fortios
+os=fortios
 
 [nxos:vars]
-os: nxos
+os=nxos
 
 [juniper:vars]
-os: junos
+os=junos
 
